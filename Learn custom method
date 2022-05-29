@@ -1,0 +1,18 @@
+//How we can create custom method to fetch the data from Database.
+/For custom method only we need to deaclare funtion in the userInterface (UserRepository) and the name which is used in method is similar as metioned in the below link.
+//https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference
+//Using JPA ,develpoers work is reduce and focus on business logic
+
+//Please check below example which is useful to develop application
+
+package com.jpa.test.dao;
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.jpa.test.entities.User;
+
+public interface UserRepository extends  CrudRepository<User, Integer>{
+
+	public List<User> findByName(String name);
+}

@@ -16,3 +16,16 @@ public interface UserRepository extends  CrudRepository<User, Integer>{
 
 	public List<User> findByName(String name);
 }
+
+
+//@Query 
+//JPQL query 
+@Query("select u from User u")
+	public List<User> findAllUser();
+	
+	@Query("select u from User u where u.name =:n")
+	public List<User> getUserByName(@Param("n") String name);
+	
+//native query 
+@Query(value="select * from user ",nativeQuery=true)
+	public List<User> getUser();

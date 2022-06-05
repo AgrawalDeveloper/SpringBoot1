@@ -11,6 +11,12 @@ public class Book {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public Book(int id, String title, String author) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.author = author;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -19,6 +25,10 @@ public class Book {
 	}
 	public String getAuthor() {
 		return author;
+	}
+	public Book() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	public void setAuthor(String author) {
 		this.author = author;
